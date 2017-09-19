@@ -23,7 +23,20 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/ship/:id', {
+        templateUrl: 'views/details.html',
+        controller: 'DetailsCtrl',
+        controllerAs: 'details'
+      })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .directive('imgName', function(){
+    return {
+      link: function(scope, element, attrs){
+        const imageName = attrs.imgName.toLowerCase().split(' ').join('-');
+        attrs.$set('src', 'images/'+imageName+'.jpg');
+      }
+    };
   });
