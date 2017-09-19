@@ -1,0 +1,13 @@
+<section class="main-section">
+    <article>
+        <h2>{{details.ship.name}} - Information</h2>
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                <h4>Slide {{slide.id}}</h4>
+                <p>{{slide.text}}</p>
+            </div>
+        </div>
+    </article>
+</section>
