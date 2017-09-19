@@ -8,16 +8,27 @@
  * Controller of the darkSideStoreApp
  */
 angular.module('darkSideStoreApp')
-  .controller('MainCtrl', ['dataService', function (dataService) {
+  .controller('MainCtrl', ['dataService', '$location', function (dataService, $location) {
 
     const self = this;
     
     dataService.getData('starships').query(
       function(response) {
         self.ships = response.results;
-        console.log(self.ships);
       }, function(error) {
         console.log('Error receiving data: '+error);
       }
     );
+
+    this.returnCost = function(cost) {
+      if(cost === 'unknown') {
+        return 'ask for price.';
+      }
+      return cost + ' credits';
+    };
+
+    this.selectShip = function(url) {
+      const shipId = url.slice(31, url.length - 1);
+      $location.path( '/ship/'+shipId );
+    }
   }]);

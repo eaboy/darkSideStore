@@ -1,4 +1,12 @@
-<div class="jumbotron">
+<section class="main-section">
   <h2>Select a Starship</h2>
-  
-</div>
+  <div class="row ships-list">
+    <div ng-repeat="ship in main.ships track by $index" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ship-container">
+      <img img-name="{{ship.name}}" alt="" class="img-rounded ship">
+      <div class="ship-overlay">
+        <div class="ship-info"><h5 class="ship-name">{{ship.name}}</h5><h6 class="ship-cost">Cost: {{main.returnCost(ship.cost_in_credits)}}</h6></div>
+        <button type="button" class="btn btn-info" ng-click="main.selectShip(ship.url)"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Details</button>        
+      </div>
+    </div>
+  </div>
+</section>
