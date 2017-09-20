@@ -1,3 +1,10 @@
 .ship-image {
     height: 300px;
 }
+
+.ship-data {
+    background-color: rgba(255,255,255,0.5);
+    & h4{
+        color: rgb(243,199,42);
+    }
+}
