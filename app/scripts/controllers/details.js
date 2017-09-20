@@ -14,36 +14,53 @@ angular.module('darkSideStoreApp')
     const shipId = $routeParams.id;
     this.images = [
       { id: 0,
-        image: 'images/death-star.jpg'
+        image: 'images/death-star.jpg',
+        shipId: 9
       },
       { id: 1,
-        image: 'images/ef76-nebulon-b-escort-frigate.jpg'
+        image: 'images/ef76-nebulon-b-escort-frigate.jpg',
+        shipId: 23
       },
       { id: 2,
-        image: 'images/executor.jpg'
+        image: 'images/executor.jpg',
+        shipId: 15
       },
       { id: 3,
-        image: 'images/imperial-shuttle.jpg'
+        image: 'images/imperial-shuttle.jpg',
+        shipId: 22
       },
       { id: 4,
-        image: 'images/millennium-falcon.jpg'
+        image: 'images/millennium-falcon.jpg',
+        shipId: 10
       },
       { id: 5,
-        image: 'images/sentinel-class-landing-craft.jpg'
+        image: 'images/sentinel-class-landing-craft.jpg',
+        shipId: 5
       },
       { id: 6,
-        image: 'images/slave-1.jpg'
+        image: 'images/slave-1.jpg',
+        shipId: 21
       },
       { id: 7,
-        image: 'images/tie-advanced-x1.jpg'
+        image: 'images/tie-advanced-x1.jpg',
+        shipId: 13
       },
       { id: 8,
-        image: 'images/x-wing.jpg'
+        image: 'images/x-wing.jpg',
+        shipId: 12
       },
       { id: 9,
-        image: 'images/y-wing.jpg'
+        image: 'images/y-wing.jpg',
+        shipId: 11
       },
     ];
+
+    this.images.forEach(function(element) {
+      if(shipId == element.shipId){
+        this.images[0].id = element.id;
+        element.id = 0;
+      }
+    }, this);
     
     dataService.getData('starships/' + shipId).query(
       function(response) {
