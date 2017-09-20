@@ -1,11 +1,65 @@
 <section class="main-section">
     <article>
         <h2>{{details.ship.name}} - Information</h2>
-        <div uib-carousel active="0" interval="5000" no-wrap="false">
+        <div uib-carousel active="0" interval="7000" no-wrap="false">
             <div uib-slide ng-repeat="image in details.images track by image.id" index="image.id">
                 <img ng-src="{{image.image}}" style="margin:auto;" class="img-responsive ship-image">
-                <div class="carousel-caption">
-                <h4>Slide {{image.id}}</h4>
+                <div class="carousel-caption"></div>
+            </div>
+        </div>
+        <div class="ship-data clearfix">
+            <div class="col-xs-12 col-md-7 ship-text">
+                <h4>Information</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod diam ipsum, eget cursus ante ultricies vel. Nunc gravida eleifend leo id faucibus. Maecenas quis turpis odio. Praesent fermentum ornare mattis. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet varius magna, ac posuere nibh. In hac habitasse platea dictumst. Aenean vehicula tincidunt tellus, eget tincidunt ante interdum a. Cras rutrum egestas odio, ut dictum nunc consequat at. Vestibulum sit amet enim consectetur lorem tempus bibendum. Pellentesque ante lectus, varius id convallis ut, vehicula ac est. Duis et maximus orci.</p>                
+                <p>Donec bibendum venenatis nisl, id posuere tortor laoreet ut. Integer lobortis laoreet vestibulum. Nam sed orci sapien. Morbi molestie, dolor in lobortis commodo, metus ipsum cursus orci, eget fringilla est mauris varius odio. In sodales imperdiet ultrices. Quisque auctor quam et nisi iaculis, sed malesuada massa vulputate. Sed cursus accumsan lorem. Fusce non nisi malesuada, vulputate sem non, suscipit sem. Aliquam et est ac dui lacinia auctor in vitae orci. Pellentesque pharetra arcu elit, vitae consequat mi vulputate et. Etiam molestie dolor vel elit accumsan iaculis. Etiam ornare, tellus sit amet aliquam porttitor, sapien neque elementum eros, in maximus quam libero at felis. Quisque eros magna, tincidunt vel consequat vel, tristique eu ante. Maecenas imperdiet quam id nulla lobortis, viverra cursus sapien iaculis. Pellentesque maximus ante a arcu euismod faucibus.</p>                
+                <p>Vivamus commodo rhoncus nulla, vitae blandit orci feugiat id. Curabitur purus justo, suscipit quis mattis in, mollis in metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac elementum libero. Suspendisse vehicula ac arcu a faucibus. Sed suscipit nulla augue, sed consequat mauris pulvinar id. Ut nec massa ligula. Duis eu maximus velit. Nulla varius nibh vitae tellus laoreet, sed euismod mi ornare. Duis fermentum commodo vulputate.</p>
+            </div>
+            <div class="col-xs-12 col-md-5 ship-table">                
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th><h4>Ship Data</h4></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Model</td>
+                            <td>{{details.ship.model}}</td>
+                        </tr>
+                        <tr>
+                            <td>Length</th>
+                            <td>{{details.ship.length}}</td>
+                        </tr>
+                        <tr>
+                            <td>Max speed</th>
+                            <td>{{details.ship.max_atmosphering_speed}}</td>
+                        </tr>
+                        <tr>
+                            <td>Crew</th>
+                            <td>{{details.ship.crew}}</td>
+                        </tr>
+                        <tr>
+                            <td>Passengers</th>
+                            <td>{{details.ship.passengers}}</td>
+                        </tr>
+                        <tr>
+                            <td>Capacity</t>
+                            <td>{{details.ship.cargo_capacity}}</td>
+                        </tr>
+                        <tr>
+                            <td>Hyperdrive</t>
+                            <td>{{details.ship.hyperdrive_rating}}</td>
+                        </tr>
+                        <tr>
+                            <td>MGLT</t>
+                            <td>{{details.ship.MGLT}}</td>
+                        </tr>
+                        <tr>
+                            <td>Starship Class</t>
+                            <td>{{details.ship.starship_class}}</td>
+                        </tr>
+                    </tbody>
+                </table>                
             </div>
         </div>
     </article>
