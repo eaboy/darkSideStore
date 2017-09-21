@@ -13,6 +13,8 @@ Use `npm install` and `bower install` to install all dependencies.
 
 Run `grunt` for building and `grunt serve` for preview.
 
+If you get the error `compass: command not found` run `npm run preinstall`.
+
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
