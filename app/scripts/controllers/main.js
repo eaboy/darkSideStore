@@ -30,5 +30,5 @@ angular.module('darkSideStoreApp')
     this.selectShip = function(url) {
       const shipId = url.slice(31, url.length - 1);
       $location.path( '/ship/'+shipId );
-    }
+    };
   }]);

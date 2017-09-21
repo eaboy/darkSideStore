@@ -11,7 +11,7 @@ angular.module('darkSideStoreApp')
   .controller('DetailsCtrl', ['dataService', '$routeParams', '$location', function (dataService, $routeParams, $location) {
 
     const self = this;
-    const shipId = $routeParams.id;
+    const shipId = parseInt($routeParams.id);
     this.images = [
       { id: 0,
         image: 'images/death-star.jpg',
@@ -56,7 +56,7 @@ angular.module('darkSideStoreApp')
     ];
 
     this.images.forEach(function(element) {
-      if(shipId == element.shipId){
+      if(shipId === element.shipId){
         this.images[0].id = element.id;
         element.id = 0;
       }
