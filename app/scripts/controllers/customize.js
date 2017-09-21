@@ -14,6 +14,10 @@ angular.module('darkSideStoreApp')
 
     const self = this;
     const shipId = $routeParams.id;  
+    this.customizations = {};
+    this.today = new Date();
+    this.customizations.date = this.today;
+    this.customizations.passengers = 0;
 
     function randomLatLng(from,to) {
         return (Math.random() * (to - from) + from).toFixed(3) * 1;
