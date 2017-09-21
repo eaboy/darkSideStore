@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'starwars';
+    src: url(../styles/fonts/starwars.ttf) format('truetype');
+  }
+  
+  .browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+  
+  body {
+    padding: 0;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  .clearfix:after {
+     content: " "; /* Older browser do not support empty content */
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+  }
+  
+  /* Everything but the jumbotron gets side spacing for mobile first views */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Custom page header */
+  .header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+  
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 40px;
+      padding-bottom: 19px;
+    }
+  }
+  
+  /* Custom page footer */
+  .footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'starwars';
+    color: $titles-color;
+  }
+  
+  .store-name{
+    text-decoration: none;
+    color: $titles-color;
+    &:hover, &:focus{
+      @extend .store-name;
+    }
+  }
