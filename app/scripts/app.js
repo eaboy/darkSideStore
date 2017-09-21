@@ -29,6 +29,11 @@ angular
         controller: 'DetailsCtrl',
         controllerAs: 'details'
       })
+      .when('/ship/:id/customize', {
+        templateUrl: 'views/customize.html',
+        controller: 'CustomizeCtrl',
+        controllerAs: 'custom'
+      })
       .otherwise({
         redirectTo: '/'
       });
