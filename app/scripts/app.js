@@ -38,6 +38,8 @@ angular
         redirectTo: '/'
       });
   })
+
+  // Directive to format starship name to image name. It transforms starship name to lowercase and replaces spaces by middle scripts and adds it to src tag
   .directive('imgName', function(){
     return {
       link: function(scope, element, attrs){

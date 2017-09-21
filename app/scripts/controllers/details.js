@@ -12,6 +12,7 @@ angular.module('darkSideStoreApp')
 
     const self = this;
     const shipId = parseInt($routeParams.id);
+
     this.images = [
       { id: 0,
         image: 'images/death-star.jpg',
@@ -55,6 +56,8 @@ angular.module('darkSideStoreApp')
       },
     ];
 
+    // Function to set the starship image the first of the carousel
+
     this.images.forEach(function(element) {
       if(shipId === element.shipId){
         this.images[0].id = element.id;
@@ -69,6 +72,9 @@ angular.module('darkSideStoreApp')
         console.log('Error receiving data: '+error);
       }
     );
+
+
+    // Function to navigate to ship customization page
 
     this.selectShip = function() {
       $location.path( '/ship/'+shipId+'/customize' );

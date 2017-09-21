@@ -20,15 +20,19 @@ angular.module('darkSideStoreApp')
       }
     );
 
+    // Function to return formated cost, if cost is unknown it returns 'ask for price.' if not it returns cost adding the word credits.
+
     this.returnCost = function(cost) {
       if(cost === 'unknown') {
         return 'ask for price.';
       }
-      return cost + ' credits';
+      return cost + ' credits.';
     };
 
+    // Function to navigate to ship details page
+
     this.selectShip = function(url) {
-      const shipId = url.slice(31, url.length - 1);
+      const shipId = url.slice(31, url.length - 1); // Extracts the id of the starship url data.
       $location.path( '/ship/'+shipId );
     };
   }]);
