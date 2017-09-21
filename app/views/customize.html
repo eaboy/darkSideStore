@@ -58,7 +58,7 @@
                 <h6>Reservation performed correctly</h6>
             </div>   
             <div class="button-container">
-                <button type="button" class="btn btn-success" ng-click="custom.build = true" ng-disabled="!custom.reserve"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Build for me</button>
+                <button type="button" class="btn btn-success" ng-click="custom.build = true; custom.reserve = false" ng-disabled="!custom.reserve"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Build for me</button>
             </div>        
             <div class="alert alert-success" ng-style="{ 'visibility' : custom.build ? 'visible' : 'hidden' }">
                 <h6>At your orders, my Lord</h6>
