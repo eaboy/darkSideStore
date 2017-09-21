@@ -9,6 +9,8 @@ Created using AngularJS v1.6.6
 
 ## Build & development
 
+Use `npm install` and `bower install` to install all dependencies.
+
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
