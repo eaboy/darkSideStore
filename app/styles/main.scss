@@ -97,6 +97,14 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(243,199,42);
 }
 
+.store-name{
+  text-decoration: none;
+  color: rgb(243,199,42);
+  &:hover, &:focus{
+    @extend .store-name;
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
