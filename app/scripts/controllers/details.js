@@ -8,7 +8,7 @@
  * Controller of the darkSideStoreApp
  */
 angular.module('darkSideStoreApp')
-  .controller('DetailsCtrl', ['dataService', '$routeParams', function (dataService, $routeParams) {
+  .controller('DetailsCtrl', ['dataService', '$routeParams', '$location', function (dataService, $routeParams, $location) {
 
     const self = this;
     const shipId = $routeParams.id;
@@ -69,5 +69,9 @@ angular.module('darkSideStoreApp')
         console.log('Error receiving data: '+error);
       }
     );
+
+    this.selectShip = function() {
+      $location.path( '/ship/'+shipId+'/customize' );
+    };
     
   }]);
